@@ -14,12 +14,12 @@ https://github.com/lrichter2/ELK-Stack-Project/blob/main/Ansible/install-elk.yml
 
 This document contains the following details:
 
-1.Description of the topology  
-2.Access Policies  
-3.ELK Configuration  
-4.Beats in Use  
-5.Machines Being Monitored  
-6.How to Use the Ansible Build  
+1. Description of the topology  
+2. Access Policies  
+3. ELK Configuration  
+4. Beats in Use  
+5. Machines Being Monitored  
+6. How to Use the Ansible Build  
 
 **Description of the Topology**
 
