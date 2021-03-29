@@ -29,8 +29,8 @@ Load balancing ensures that the application will be highly available, in additio
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the file systems of the VMs on the network, as well as watch system metrics, such as CPU usage, attempted SSH logins, sudo escalation failures, etc.
 
-+What does Filebeat watch for?  Filebeat logs information about the file system such as which files have changed and when they changed.
-+What does Metricbeat record?  Metricbeat collects metrics from the OS and from services running on the server.  It takes the metrics and statistics and ships the info to Elasticsearch or Logstash, for example.
+-What does Filebeat watch for?  Filebeat logs information about the file system such as which files have changed and when they changed.
+-What does Metricbeat record?  Metricbeat collects metrics from the OS and from services running on the server.  It takes the metrics and statistics and ships the info to Elasticsearch or Logstash, for example.
 
 The configuration details of each machine may be found below.
 
@@ -43,8 +43,8 @@ The configuration details of each machine may be found below.
 
 In addition to the above, Azure has provisioned a load balancer in front of all machines except for the jump box.  The load balancer’s targets are organized into the following availability zones.
 
-..Availability Zone 1:  DVWA 1 + DVWA 2
-..Availability Zone 2:  ELK
+-Availability Zone 1:  DVWA 1 + DVWA 2
+-Availability Zone 2:  ELK
 
 **ELK Server Configuration**
 
@@ -60,7 +60,7 @@ The machines on the internal network are not exposed to the public Internet.
 
 Only the jump box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP address:
 
-..104.218.222.177
+-104.218.222.177
 
 Machines within the network can only be accessed by each other.  The DVWA1 and DVWA 1 VMs send traffic to the ELK server.
 
@@ -79,12 +79,12 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 
 The playbook implements the following tasks:
 
-  Install docker
-  Install pip3
-  Install docker python module
-  Increase virtual memory
-  Use more memory
-  Download and launch a docker ELK container
+1. Install docker  
+2. Install pip3  
+3. Install docker python module  
+4. Increase virtual memory  
+5. Use more memory  
+6. Download and launch a docker ELK container  
   
 The following screenshot displays the result of running docker ps after successfully configuring the ELK instance:
 
@@ -150,16 +150,16 @@ https://github.com/lrichter2/ELK-Stack-Project/blob/main/Ansible/install-elk.yml
 
 This ELK server is configured to monitor the following machines:
 
-  DVWA 1:  10.0.0.5
-  DVWA 2:  10.0.0.6
+-DVWA 1:  10.0.0.5  
+-DVWA 2:  10.0.0.6  
   
 We have installed the following Beats on these machines:
 
-..Filebeat
+-Filebeat
 
 These Beats allow us to collect the following information from each machine:
 
-..Filebeat:  Filebeat detects changes to the file system.  Specifically, we use it to collect Apache logs.
+-Filebeat:  Filebeat detects changes to the file system.  Specifically, we use it to collect Apache logs.
 
 The playbook below installs Filebeat on the target hosts.  The playbook for installing Metricbeat is not included, but you can simply replace filebeat with metricbeat and it will work as expected.
 
@@ -202,14 +202,13 @@ https://github.com/lrichter2/ELK-Stack-Project/blob/main/Ansible/filebeat-playbo
       name: filebeat
       enabled: yes
  
-
 **Using the Playbook**
 
 In order to use the playbook, you will need to have an Ansible control node already configured. We use the jump box for this purpose.  
 To use the playbooks, you will perform the following steps:
 
-..Copy the playbooks to the Ansible Control Node (container).
-..Run each playbook on the appropriate targets.
+-Copy the playbooks to the Ansible Control Node (container).  
+-Run each playbook on the appropriate targets.  
 
 The easiest way to copy the playbooks is to use Git.
 
