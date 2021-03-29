@@ -123,32 +123,32 @@ To use the playbooks, you will perform the following steps:
 
 The easiest way to copy the playbooks is to use Git.
 
-$ cd /etc/ansible
-$ mkdir files
-#Clone Repository + IaC Files
-$ git clone https://github.com/lrichter2/ELK-Stack-Project.git
-#Move Playbooks and hosts file Into `/etc/ansible`
-$ cp project-1/playbooks/* .
-$ cp project-1/files/* ./files
+$ cd /etc/ansible  
+$ mkdir files  
+#Clone Repository + IaC Files  
+$ git clone https://github.com/lrichter2/ELK-Stack-Project.git  
+#Move Playbooks and hosts file Into `/etc/ansible`  
+$ cp project-1/playbooks/* .   
+$ cp project-1/files/* ./files  
 
 This copies the playbook files to the correct place.
 Next, a hosts file must be created to specify which VMs to run each playbook on. Run the commands below:
 
-$ cd /etc/ansible
-$ cat > hosts <<EOF
-[webservers]
-10.0.0.5
-10.0.0.6
+$ cd /etc/ansible  
+$ cat > hosts <<EOF  
+[webservers]  
+10.0.0.5  
+10.0.0.6  
 
-[elk]
-10.1.0.4
+[elk]  
+10.1.0.4  
 EOF
 
 After this, use the commands below to run the playbook:
 
-$ cd /etc/ansible
-$ ansible-playbook install_elk.yml elk
-$ ansible-playbook install_filebeat.yml webservers
+$ cd /etc/ansible  
+$ ansible-playbook install_elk.yml elk  
+$ ansible-playbook install_filebeat.yml webservers  
 
 To verify success, wait five minutes to give ELK time to start up.
 
