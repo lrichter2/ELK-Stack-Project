@@ -14,12 +14,12 @@ https://github.com/lrichter2/ELK-Stack-Project/blob/main/Ansible/install-elk.yml
 
 This document contains the following details:
 
-1. Description of the topology  
-2. Access Policies  
-3. ELK Configuration  
-4. Beats in Use  
-5. Machines Being Monitored  
-6. How to Use the Ansible Build  
+1.  Description of the topology  
+2.  Access Policies  
+3.  ELK Configuration  
+4.  Beats in Use  
+5.  Machines Being Monitored  
+6.  How to Use the Ansible Build  
 
 **Description of the Topology**
 
@@ -29,8 +29,8 @@ Load balancing ensures that the application will be highly available, in additio
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the file systems of the VMs on the network, as well as watch system metrics, such as CPU usage, attempted SSH logins, sudo escalation failures, etc.
 
-..What does Filebeat watch for?  Filebeat logs information about the file system such as which files have changed and when they changed.
-..What does Metricbeat record?  Metricbeat collects metrics from the OS and from services running on the server.  It takes the metrics and statistics and ships the info to Elasticsearch or Logstash, for example.
++What does Filebeat watch for?  Filebeat logs information about the file system such as which files have changed and when they changed.
++What does Metricbeat record?  Metricbeat collects metrics from the OS and from services running on the server.  It takes the metrics and statistics and ships the info to Elasticsearch or Logstash, for example.
 
 The configuration details of each machine may be found below.
 
