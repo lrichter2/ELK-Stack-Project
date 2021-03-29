@@ -52,7 +52,7 @@ The ELK VM exposes an Elastic Stack instance. Docker is used to download and man
 
 Rather than configure ELK manually, we opted to develop a reusable Ansible Playbook to accomplish the task. This playbook is duplicated below.
 
-To use this playbook, one must log into the Jump Box, then issue: ansible-playbook install_elk.yml elk. This runs the install_elk.yml playbook on the elk host.
+To use this playbook, one must log into the Jump Box, then run the command: ansible-playbook install_elk.yml elk. This runs the install_elk.yml playbook on the elk host.
 
 **Access Policies**
 
